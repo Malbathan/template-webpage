@@ -1,10 +1,16 @@
 import React from 'react';
 import styled from "styled-components";
 
+import { IconContext } from 'react-icons/lib';
+
+import { SidebarData } from './data';
+import SubMenu from './subMenu';
+
+
 const StyledSideNav = styled.div`
   position: fixed;
   height: 100%;
-  width: 75px;
+  width: 250px;
   z-index: 1;
   top: 3.4em; 
   background-color: #f8f9fa;
@@ -12,12 +18,40 @@ const StyledSideNav = styled.div`
   padding-top: 10px;
 `;
 
-class SideNav extends React.Component {
-  render() {
+const SidebarNav = styled.nav`
+  background: #f8f9fa;
+  width: 250px;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 5vh;
+  left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
+  transition: 350ms;
+  z-index: 10;
+`;
+
+const SidebarWrap = styled.div`
+  width: 100%;
+`;
+
+const SideNav  = () => {
+
+
+
     return (
-      <StyledSideNav/>
+      <StyledSideNav>
+        <IconContext.Provider value={{ color: '#3D8BFD' }}>
+          <SidebarNav sidebar>
+          <SidebarWrap>
+            {SidebarData.map((item, index) => {
+              return <SubMenu item={item} key={index} />;
+            })}
+          </SidebarWrap>
+        </SidebarNav>
+        </IconContext.Provider>
+      </StyledSideNav>
     );
-  }
 }
 
 export default class Sidebar extends React.Component {

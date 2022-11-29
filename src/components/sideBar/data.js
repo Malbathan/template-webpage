@@ -3,11 +3,14 @@ import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
 import * as RiIcons from 'react-icons/ri';
+import * as TbIcons from 'react-icons/tb';
+import * as BsIcons from 'react-icons/bs';
+
 
 export const SidebarData = [
   {
     title: 'Home',
-    path: '/Home',
+    path: '/',
     icon: <AiIcons.AiFillHome />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -15,20 +18,29 @@ export const SidebarData = [
     subNav: [
       {
         title: 'Users',
-        path: '/overview/users',
-        icon: <IoIcons.IoIosPaper />
+        path: '/account/users',
+        icon: <BsIcons.BsDot />,
+        
+        subNav: [
+          {
+            title: 'User',
+            path: '/account/users/user',
+            icon: <BsIcons.BsDot />,
+          }
+        ]
+
       },
       {
         title: 'Revenue',
         path: '/overview/revenue',
-        icon: <IoIcons.IoIosPaper />
+        icon: <BsIcons.BsDot />
       }
     ]
   },
   {
-    title: 'Relatórios',
-    path: '/relatorios',
-    icon: <IoIcons.IoIosPaper />,
+    title: 'Consultas',
+    path: '/consultas',
+    icon: <TbIcons.TbFileSearch />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
 
@@ -36,30 +48,30 @@ export const SidebarData = [
       {
         title: 'Reports',
         path: '/reports/reports1',
-        icon: <IoIcons.IoIosPaper />,
+        icon: <BsIcons.BsDot />,
         cName: 'sub-nav'
       },
       {
         title: 'Reports 2',
         path: '/reports/reports2',
-        icon: <IoIcons.IoIosPaper />,
+        icon: <BsIcons.BsDot />,
         cName: 'sub-nav'
       },
       {
         title: 'Reports 3',
         path: '/reports/reports3',
-        icon: <IoIcons.IoIosPaper />
+        icon: <BsIcons.BsDot />,
       }
     ]
   },
   {
-    title: 'Promoções',
-    path: '/promocoes',
+    title: 'Products',
+    path: '/products',
     icon: <FaIcons.FaCartPlus />
   },
   {
-    title: 'Team',
-    path: '/team',
+    title: 'About',
+    path: '/about',
     icon: <IoIcons.IoMdPeople />
   },
   {
@@ -74,12 +86,12 @@ export const SidebarData = [
       {
         title: 'Message 1',
         path: '/messages/message1',
-        icon: <IoIcons.IoIosPaper />
+        icon: <BsIcons.BsDot />
       },
       {
         title: 'Message 2',
         path: '/messages/message2',
-        icon: <IoIcons.IoIosPaper />
+        icon: <BsIcons.BsDot />
       }
     ]
   },
