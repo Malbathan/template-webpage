@@ -1,5 +1,5 @@
 import React from 'react';
-import { GridWrapper } from '../../utils/ui/gridWrapper';
+import { GridWrapper } from '../../utils/ui';
 
 export const Home = (props) => (
   <GridWrapper>
