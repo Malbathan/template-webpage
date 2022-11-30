@@ -21,11 +21,11 @@ const StyledSideNav = styled.div`
 const SidebarNav = styled.nav`
   background: #f8f9fa;
   width: 250px;
-  height: 95vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   position: fixed;
-  top: 5vh;
+  top: 10vh;
   left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
   transition: 350ms;
   z-index: 10;
