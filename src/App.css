@@ -30,3 +30,8 @@
   padding: 15px 20px;
   display: block;
 }
+
+.menu li a:hover {
+  background-color: #e7f1ff;
+  color: cornflowerblue;
+}
