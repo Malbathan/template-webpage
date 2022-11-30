@@ -18,7 +18,6 @@ const Background = styled.div`
 
 const ModalWrapper = styled.div`
   width: 20vw;
-  max-height: 100vh;
   box-shadow: 0 5px 16px rgb(0 0 0 / 20%);
   background: #fff;
   color: #000;

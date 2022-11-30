@@ -56,7 +56,7 @@ const NavigationBar = () => {
   return (
     <Styles>
       <Navbar expand="lg">
-        <Navbar.Brand href="/"><img src="logo.png" alt="logotipo martins"/></Navbar.Brand>
+        <Navbar.Brand href="/"><img src="Logo.png" alt="logotipo martins"/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Form className="form-center">
           <FormControl type="text" placeholder="Search" className="" />
